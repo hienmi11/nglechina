@@ -753,6 +753,7 @@ a .dark #header.sticky-header:not(.transparent-header) #header-wrap:not(.not-dar
     justify-content: center;
     margin: auto;
     padding-top: 50px;
+    margin-bottom:100px;
 }
 
 /* about start */
@@ -1134,8 +1135,83 @@ a .dark #header.sticky-header:not(.transparent-header) #header-wrap:not(.not-dar
 .recruit-btn-text:hover{
 	color: #00b5c1 !important;
 }
+
 /* recruit end*/
 
+/* send start */
+
+.send-row{
+	margin-top: 80px;
+	background:url("http://images.ngledl.com/images/recruit_bg.png");
+	width:100%;
+	height:400px;
+}
+.send-box{
+	max-width: 1040px;
+    margin: 50px auto 50px;
+    justify-content: space-between;
+}
+.send-title{
+	font-size: 34px;
+	font-weight: 400 !important;
+	letter-spacing: 0.2em;
+	line-height: 1.3;
+	color:#fff  !important;
+	padding-top:50px;
+}
+.send-text{
+	font-size: 18px;
+	font-weight: 100 !important;
+	letter-spacing: 0.2em;
+	line-height: 1.3;
+	color:#fff  !important;
+	margin-top:30px;
+}
+
+.send-btn{
+	width:250px;
+	height:60px;
+	background-color: #00b5c1 !important;
+	text-align:center;
+	margin-top:80px;	
+}
+.send-btn:hover{
+	background-color: #fff !important;
+	border: 1px solid #00b5c1
+}
+.send-btn-text{
+	font-size: 18px;
+	font-weight: 600 !important;
+    padding: 15px 47px 36px 47px !important;
+    color: #fff !important;
+}
+.send-btn-text:hover{
+	color: #00b5c1 !important;
+}
+
+
+/* send end */
+
+/*  job start */
+.job-row{
+	width:100%;
+	height:550px;
+}
+.job-box{
+	max-width: 1040px;
+    margin: 50px auto 50px;
+    justify-content: space-between;
+}
+.job-title{
+	font-size: 20px;
+	color: #00b5c1 !important;
+	font-weight: 400 !important;
+	letter-spacing: 0.2em;
+	line-height: 1.3;
+	padding-top: 100px;
+}
+
+/*  job end */
 
 
 

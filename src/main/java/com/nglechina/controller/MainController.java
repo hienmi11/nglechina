@@ -33,7 +33,7 @@ public class MainController {
 	public ModelAndView index(HttpServletRequest req, HttpServletResponse res){
 		ModelAndView mv = new ModelAndView();
 		
-		mv.addObject("image_server", "http://images.ngledl.com");
+		mv.addObject("image_server", "http://localhost:8080");
 		mv.setViewName("index");
 		return mv;
 		
@@ -42,8 +42,17 @@ public class MainController {
 	public ModelAndView recruit(HttpServletRequest req, HttpServletResponse res){
 		ModelAndView mv = new ModelAndView();
 		
-		mv.addObject("image_server", "http://images.ngledl.com");
+		mv.addObject("image_server", "http://localhost:8080");
 		mv.setViewName("recruit");
+		return mv;
+		
+	}
+	@RequestMapping(value={"/introduction"})
+	public ModelAndView introduction(HttpServletRequest req, HttpServletResponse res){
+		ModelAndView mv = new ModelAndView();
+		
+		mv.addObject("image_server", "http://localhost:8080");
+		mv.setViewName("introduction");
 		return mv;
 		
 	}
