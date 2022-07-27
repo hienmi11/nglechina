@@ -46,11 +46,9 @@
                     <div class="mobile-logo">
                         <img src="http://localhost:8080/images/logo_light.png" onclick="javascript:window.location.href='/'">
                     </div>
-                    <!-- <div class="mobile-menu">
-				<img src="/images/open.png">
-		    </div> -->
                 </div>
             </div>
+            <!-- ---------SEND RESUME-------------------------------- -->
             <section class="send">
                 <div class="send-row">
                     <div class="send-box">
@@ -69,13 +67,55 @@
                 </div>
                  </section>
         </div>
-        <section class="job-introduction">
-        <div class="job-row">
-        	<div class="job-box">
-        		<div class="job-title" data-translate="job-titile">招聘职务</div>
-        		<hr />
+        <!-- -----------job list--------------------------------------------- -->
+        <section class="job-list">
+        	<div class="container">
+        		<div class="job-row">
+        			<div class="job-title line" data-translate="job-titile">招聘职务</div>
+        			<div class="job-group">
+        				<ul class="job-tabs" id="myTab">
+        					<li class="tab-item line">
+        						<span data-translate="job-name-1">游戏测试QA</span>
+        						<img src="/images/arrowRight.png" class="arrow">
+        					</li>
+        					<!-- ----------job panel-------------------------------------- -->
+				        	<div class="job-panel">
+				        		<div class="empty-space"></div>
+				        		<div class="job-body">
+				        			<div class="panel-title" data-translate="panel=title">[职务详情]</div>
+				        			<div class="job-text" data-translate="job-text">1111111111111</div>
+				        		</div>
+				        	</div>
+        					<li class="tab-item line ">
+        						<span  data-translate="job-name-2">中韩翻译</span>
+        						<img src="/images/arrowRight.png" class="arrow">
+        					</li>
+        					<div class="job-panel">
+				        		<div class="empty-space"></div>
+				        		<div class="job-body">
+				        			<div class="panel-title" data-translate="panel=title">[职务详情]</div>
+				        			<div class="job-text" data-translate="job-text">1111111111111</div>
+				        		</div>
+				        	</div>
+        					<li class="tab-item line">
+        						<span  data-translate="job-name-3">Application develop</span>
+        							<img src="/images/arrowRight.png" class="arrow">
+        					</li>
+        					<div class="job-panel">
+				        		<div class="empty-space"></div>
+				        		<div class="job-body">
+				        			<div class="panel-title" data-translate="panel=title">[职务详情]</div>
+				        			<div class="job-text" data-translate="job-text">1111111111111</div>
+				        		</div>
+				        	</div>
+        				</ul>	
+        			</div>
+        			<div class="tab-content">
+        				<div class="job-text"></div>
+        			</div>
+        		</div>
+        	
         	</div>
-        </div>
         </section>
 
 <!-- Footer ============================================= -->
@@ -90,7 +130,6 @@
         </div>
     </div>
 </section>
-</div>
 <!-- Go To Top
 	============================================= -->
 <div id="gotoTop" class="icon-angle-up">

@@ -59,6 +59,7 @@ body {
 	line-height: 1.5;
 	color: #555;
 	font-family: "Noto Sans SC", "Microsoft YaHei", 'Lato', sans-serif;
+	user-select:none;
 }
 
 a {
@@ -1203,12 +1204,52 @@ a .dark #header.sticky-header:not(.transparent-header) #header-wrap:not(.not-dar
     justify-content: space-between;
 }
 .job-title{
-	font-size: 20px;
+	font-size: 21px;
 	color: #00b5c1 !important;
-	font-weight: 400 !important;
+	font-weight: 550 !important;
 	letter-spacing: 0.2em;
 	line-height: 1.3;
 	padding-top: 100px;
+	padding-bottom:20px;
+	margin-bottom: 35px;
+}
+.job-tabs li{
+	cursor: pointer;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+}
+.job-tabs li:hover{
+    color: #48D1CC;
+}
+.tab-item{
+	padding-top:20px;
+	padding-bottom:10px;
+}
+.arrow{
+	width:10px;
+	height:10px;
+	overflow:hidden;
+	
+}
+.empty-space{
+	padding:18px;
+}
+.job-panel{
+	background-color: #eeeeee;
+	display:none;
+}
+.job-body{
+	position: relative;
+	
+}
+.panel-title{
+	font-weight:bold;
+	font-size:12px;
+	line-height:2.5;
+}
+.job-text{
+	font-size:12px;
 }
 
 /*  job end */
@@ -1655,6 +1696,11 @@ a .dark #header.sticky-header:not(.transparent-header) #header-wrap:not(.not-dar
 .defalut-text{
 	font-size:16px;
 }
+.line{
+	border-bottom:1px solid #eeeeee;
+} 
+
+
 @media (max-width: 769px) {
 	.m-15{
 		margin:15px;
