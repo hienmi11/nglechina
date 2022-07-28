@@ -18,6 +18,11 @@ function addEvt(){
         
 		goClose();
 	});
+	//投简历按钮
+	$(".send_resume").on("click",function(e){
+		var tar = e.currentTarget;
+		window.location.href = "/recruit?position_code="+tar.dataset.id;
+	});
 	$(".tab-item").on("click",function(e){
 		
 		var tar = e.currentTarget;
@@ -37,7 +42,7 @@ function addEvt(){
 		}else{
 			$(this).addClass("rotate");
 			tar.children[1].src="/images/arrowDown.png";
-			document.querySelectorAll(".job-panel")[idx].style.display="block";
+			document.querySelectorAll(".job-panel")[idx].style.display="flex";
 		}
 		
 	});
@@ -55,6 +60,7 @@ function addEvt(){
 	
 	
 }
+
 function goOpen(){
 	$(".mobile-body").fadeIn(1000);
 	$(".mobile-body").removeClass("display-n");

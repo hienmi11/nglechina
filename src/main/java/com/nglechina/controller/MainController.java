@@ -26,6 +26,8 @@ import net.sf.json.JSONObject;
 @Controller
 @SpringBootApplication(scanBasePackages = "/nglechina")
 public class MainController {
+	//public static final String image_server = "http://localhost:8080";	//local
+	public static final String image_server = "http://images.ngledl.com";		//real
 	public static void main(String[] args) {
 		SpringApplication.run(MainController.class, args);
 	}
@@ -33,7 +35,7 @@ public class MainController {
 	public ModelAndView index(HttpServletRequest req, HttpServletResponse res){
 		ModelAndView mv = new ModelAndView();
 		
-		mv.addObject("image_server", "http://localhost:8080");
+		mv.addObject("image_server", image_server);
 		mv.setViewName("index");
 		return mv;
 		
@@ -42,7 +44,26 @@ public class MainController {
 	public ModelAndView recruit(HttpServletRequest req, HttpServletResponse res){
 		ModelAndView mv = new ModelAndView();
 		
-		mv.addObject("image_server", "http://localhost:8080");
+ 		String code = req.getParameter("position_code");
+ 		String position_name = "";
+ 		switch(code) {
+ 		case "0":
+ 			position_name = "韩国游戏测试";
+ 			break;
+ 		case "1":
+ 			position_name = "韩国游戏客服";
+ 			break;
+ 		case "2":
+ 			position_name = "中韩翻译";
+ 			break;
+ 		default:
+ 			position_name = "Application develop";
+ 			break;
+ 		
+ 		}
+		mv.addObject("position_code", code);
+		mv.addObject("position_name", position_name);
+		mv.addObject("image_server", image_server);
 		mv.setViewName("recruit");
 		return mv;
 		
@@ -51,7 +72,7 @@ public class MainController {
 	public ModelAndView introduction(HttpServletRequest req, HttpServletResponse res){
 		ModelAndView mv = new ModelAndView();
 		
-		mv.addObject("image_server", "http://localhost:8080");
+		mv.addObject("image_server", image_server);
 		mv.setViewName("introduction");
 		return mv;
 		
@@ -116,14 +137,14 @@ public class MainController {
 		String phoneNumber = req.getParameter("phoneNumber");
 		String userEmail = req.getParameter("userEmail");
 		String fileName = req.getParameter("fileName");
-		
+		String position_name = req.getParameter("position_name");
 		
 		JSONObject resultJson = new JSONObject();
 		boolean flag = false;
 
 		if(isEmpty(userNm) && isEmpty(phoneNumber) && isEmpty(userEmail) && isEmpty(fileName)) {
-			flag = send(userNm, phoneNumber, userEmail, fileName);
-		}else {
+			flag = send(userNm, phoneNumber, userEmail, fileName,position_name);
+		}else { 
 			message ="파라미터가 없습니다.";
 		}
 		
@@ -163,7 +184,7 @@ public class MainController {
 	
 	@Autowired
 	JavaMailSender javaMailSender;
-	public boolean send(String userNm, String phoneNumber,String userEmail,String fileName) {
+	public boolean send(String userNm, String phoneNumber,String userEmail,String fileName,String position_name) {
 		
 		String mailBody = "";
 		
@@ -184,7 +205,7 @@ public class MainController {
 	        
 	        helper.setSentDate(new Date());
 	        
-	        mailBody = mailContent(userNm,phoneNumber,userEmail);
+	        mailBody = mailContent(userNm,phoneNumber,userEmail,position_name);
 	        
 	        helper.setText(mailBody,true);
 	        
@@ -217,12 +238,13 @@ public class MainController {
 		return true;
 	}
 	
-	public String mailContent(String userNm, String phoneNumber,String userEmail) {
+	public String mailContent(String userNm, String phoneNumber,String userEmail,String position_name) {
 		
 		String body = "<p>이력서 전달드립니다.</p>";
 			body += "<p>성명："+userNm+"</p>";
 			body += "<p>핸드폰번호："+phoneNumber+"</p>";
 			body += "<p>메일주소："+userEmail+"</p>";
+			body += "<p>희망직무："+ position_name +"</p>";
 			body += "<p>확인부탁드립니다.</p>";
 			body += "<p>감사합니다.</p>";
 			body += "<p>수고하세요.</p>";

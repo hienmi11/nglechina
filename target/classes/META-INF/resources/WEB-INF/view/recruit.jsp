@@ -78,6 +78,11 @@
 	        	<input class="resume-input" type="text" name="userEmail" size="34"/>
 	        	<input type="hidden" name="fileName">
 	        </div>
+	        <div class="resume-content">
+	            <p class="resume-column"><font style="color:red;">*</font>岗位：</p>
+	        	<input class="resume-input" type="text" name="position_name" size="34" value="${position_name}" style="opacity:0.5;pointer-events:none"/>
+	        	<input class="resume-input" type="hidden" name="position_code" value="${position_code}"/>
+	        </div>
 	    </form>
 	    <form action="/fileUpload" method="POST" enctype="multipart/form-data" name="uploadform">
 	        <div class="resume-content">
