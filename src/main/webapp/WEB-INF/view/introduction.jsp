@@ -21,11 +21,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link rel="stylesheet" href="https://fonts.proxy.ustclug.org/css2?family=Noto+Sans+SC&display=swap"/>
         
-        <link rel="stylesheet" href="${image_server}/css/custom.css?v8" type="text/css"/>
+        <link rel="stylesheet" href="${image_server}/css/custom.css" type="text/css"/>
         <link rel="stylesheet" href="${image_server}/css/slick.css" type="text/css"/>
-        <link rel="stylesheet" href="css/slick-theme.css" type="text/css"/>
+        <link rel="stylesheet" href="${image_server}/css/slick-theme.css" type="text/css"/>
         <link rel="stylesheet" href="${image_server}/css/preload.css" type="text/css"/>
-        <link rel="stylesheet" href="http://localhost:8080/css/slick-theme.css" type="text/css"/>
+        <link rel="stylesheet" href="${image_server}/css/slick-theme.css" type="text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <!-- External JavaScripts
 		================================================= -->
@@ -57,7 +57,7 @@
             <div class="mobile-header visible-xs">
                 <div class="mobile-content">
                     <div class="mobile-logo">
-                        <img src="http://localhost:8080/images/logo_light.png" onclick="javascript:window.location.href='/'">
+                        <img src="${image_server}/images/logo_light.png" onclick="javascript:window.location.href='/'">
                     </div>
                 </div>
             </div>
@@ -291,7 +291,7 @@
 <section id="footer" class="page-footer color-black">
     <div class="footer-content" style="align-items:center;">
         <div class="footer-content-col1">
-            <img src="http://localhost:8080/images/logo_light.png"/>
+            <img src="${image_server}/images/logo_light.png"/>
         </div>
         <div class="footer-content-col2">
             <div class="footer-text">版权所有：© 2022 大连恩格科技有限公司</div>
@@ -302,12 +302,12 @@
 <!-- Go To Top
 	============================================= -->
 <div id="gotoTop" class="icon-angle-up">
-    <img style="width:14px; " src="http://localhost:8080/images/arrowUp.png"/>
+    <img style="width:14px; " src="${image_server}/images/arrowUp.png"/>
 </div>
 </body>
 		<script type="text/javascript" src="${image_server}/js/util.js"></script>
-		<script type="text/javascript" src="${image_server}/js/functions.js?v7"></script>
-		<script type="text/javascript" src="${image_server}/js/language.js?v2"></script>
+		<script type="text/javascript" src="${image_server}/js/functions.js"></script>
+		<script type="text/javascript" src="${image_server}/js/language.js"></script>
 		<script type="text/javascript" src="${image_server}/js/transitionAnim.js"></script>
 		<script type="text/javascript" src="${image_server}/js/portfolios.js"></script>
 		<script type="text/javascript" src="${image_server}/js/teamtable.js"></script>

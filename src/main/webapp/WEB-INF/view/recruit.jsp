@@ -132,7 +132,7 @@
 		<script type="text/javascript" src="${image_server}/js/util.js"></script>
 		<script type="text/javascript" src="${image_server}/js/plugins.js"></script>
 		<script type="text/javascript" src="${image_server}/js/functions.js"></script>
-		<script type="text/javascript" src="${image_server}/js/dictionary.js?v1"></script>
+		<script type="text/javascript" src="${image_server}/js/dictionary.js"></script>
 		<script type="text/javascript" src="${image_server}/js/transitionAnim.js"></script>
 		<script type="text/javascript" src="${image_server}/js/portfolios.js"></script>
 		<script type="text/javascript" src="${image_server}/js/teamtable.js"></script>
