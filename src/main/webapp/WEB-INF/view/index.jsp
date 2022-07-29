@@ -21,7 +21,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link rel="stylesheet" href="https://fonts.proxy.ustclug.org/css2?family=Noto+Sans+SC&display=swap"/>
         
-        <link rel="stylesheet" href="${image_server}/css/custom.css?v7" type="text/css"/>
+        <link rel="stylesheet" href="${image_server}/css/custom.css?v8" type="text/css"/>
         <link rel="stylesheet" href="${image_server}/css/slick.css" type="text/css"/>
         <link rel="stylesheet" href="css/slick-theme.css" type="text/css"/>
         <link rel="stylesheet" href="${image_server}/css/preload.css" type="text/css"/>
@@ -673,7 +673,7 @@
 	    			<br>
 	    			<div data-translate="recruit-2"></div>
 	    		</div>
-	    		<a href="/recruit">
+	    		<a href="/introduction">
 		    		<div class="recruit-btn">
 		    			<div class="recruit-btn-text">
 		    				READ MORE >

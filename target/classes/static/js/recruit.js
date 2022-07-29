@@ -49,6 +49,7 @@
 			var userNm = $("input[name='userNm']");
 			var phoneNumber = $("input[name='phoneNumber']");
 			var userEmail = $("input[name='userEmail']");
+			var position_name = $("input[name='position_name']");
 			var fileName = $("input[name='fileName']");
 			
 			if(userNm.val() ==''){
@@ -76,6 +77,9 @@
 				return;
 			}
 			showLoader();
+			var frm = document.getElementByName("form");
+			frm.action = 
+			frm.submit();
 			$.ajax({
 				type:"POST"
 				,url:"/sendMail"
@@ -92,7 +96,7 @@
 					if(result.state=='success'){
 						alert("邮件发送成功");
 						closeLoader();
-						window.location.href = "/";
+						window.location.href = "/introduction";
 					}else if(result.state=='401'){
 						alert("删除文件失败");
 						clear();
