@@ -161,7 +161,7 @@ function translate() {
         try{
         	$(this).html(dictionary[key][current_lang] || "N/A");
 		}catch(e){
-			console.log($(this));
+			//console.log($(this));
 		}
     });
 }

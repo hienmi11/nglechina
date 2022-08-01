@@ -77,9 +77,6 @@
 				return;
 			}
 			showLoader();
-			var frm = document.getElementByName("form");
-			frm.action = 
-			frm.submit();
 			$.ajax({
 				type:"POST"
 				,url:"/sendMail"

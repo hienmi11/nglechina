@@ -38,11 +38,7 @@
         <title>恩格 NGLE-CHINA</title>
     </head>
     <body class="stretched">
-    	<div class="loading-div">
-	    	<input id = "preload" type = "checkbox">
-	    	<label for="preload" class="loading">NGLE</label>
-	    	<div class="loader-ring"></div>
-    	</div>
+    	<input type="hidden" name ="url" value="${url}"/>
         <!-- Header ============================================= -->
         <header id="header" class="transparent-header hidden-xs page-section dark">
             <div id="header-wrap">
@@ -192,15 +188,6 @@
 	            </a>
 	            <img src="${image_server}/images/arrowRight.png">
 			</div>
-			<!-- <div class="mobile-lang">
-				<a href="" class="mobile-menu-tab">
-		            <div data-translate="nav-button-lang"></div>
-	            </a>
-	            <img src="/images/lang.png">
-			</div>
-			<div>
-			
-			</div> -->
 		</div>
 	</div>
 <!-- Main body ============================================= -->
