@@ -183,7 +183,6 @@ function debounce(func, wait, immediate) {
 }
 function initScroll(){
 	var url = document.getElementsByName("url")[0].value;
-	console.log($('#'+url).scrollTop())
 	var temp_height = 0;
 	switch(url){
 		case "about":
@@ -198,11 +197,14 @@ function initScroll(){
 		case "team":
 		temp_height = 950+546+450+193+828;
 		break;
-		case "recruit":
+		case "event":
 		temp_height = 950+546+450+193+582.78+828+87;
 		break;
+		case "recruit":
+		temp_height = 950+546+450+193+582.78+828+87+550;
+		break;
 		case "contact":
-		temp_height = 950+546+450+193+582.78+828+88+400;
+		temp_height = 950+546+450+193+582.78+828+88+550+400;
 		break;
 	}
 	$('html,body').stop(true).animate({

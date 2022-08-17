@@ -27,14 +27,13 @@ import net.sf.json.JSONObject;
 @SpringBootApplication(scanBasePackages = "/nglechina")
 public class MainController {
 	public static final String image_server = "http://localhost:8080";	//local
-//	public static final String image_server = "http://images.ngledl.com";		//real
+	//public static final String image_server = "http://images.ngledl.com";		//real
 	public static void main(String[] args) {
 		SpringApplication.run(MainController.class, args);
 	}
 	@RequestMapping(value={"/","/index"})
 	public ModelAndView index(HttpServletRequest req, HttpServletResponse res){
 		ModelAndView mv = new ModelAndView();
-		
 		String url = req.getParameter("url");
 		mv.addObject("url", url);
 		mv.addObject("image_server", image_server);
@@ -76,6 +75,15 @@ public class MainController {
 		
 		mv.addObject("image_server", image_server);
 		mv.setViewName("introduction");
+		return mv;
+		
+	}
+	@RequestMapping(value={"/event"})
+	public ModelAndView event(HttpServletRequest req, HttpServletResponse res){
+		ModelAndView mv = new ModelAndView();
+		
+		mv.addObject("image_server", image_server);
+		mv.setViewName("event");
 		return mv;
 		
 	}

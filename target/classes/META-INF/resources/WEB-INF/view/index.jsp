@@ -71,6 +71,11 @@
                                 </a>
                             </li>
                             <li>
+                                <a href="" class="nav-button" data-href="#event">
+                                    <div data-translate="nav-button8"></div>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="" class="nav-button" data-href="#recruit">
                                     <div data-translate="nav-button5"></div>
                                 </a>
@@ -167,6 +172,12 @@
 			<div class="mobile-tab" data-href="#team">
 				<a href="#team" class="mobile-menu-tab">
 		            <div data-translate="nav-button4"></div>
+	            </a>
+	            <img src="${image_server}/images/arrowRight.png">
+			</div>
+			<div class="mobile-tab" data-href="#event">
+				<a href="#event" class="mobile-menu-tab">
+		            <div data-translate="nav-button8"></div>
 	            </a>
 	            <img src="${image_server}/images/arrowRight.png">
 			</div>
@@ -649,6 +660,31 @@
     
     <!-- our team end============================================= -->
     
+    <!--  event start======================================================  -->
+    <section id="event">
+    	<div class="event-row">
+    		<div class="event-box">
+	    		<div class="event-title" data-translate="event-title"></div>
+	    		<a href="/event">
+		    		<div class="event-btn">
+		    			<div class="event-btn-text">
+		    				READ MORE >
+		    			</div>
+		    		</div>
+    			</a>
+    			<div class="d-flex event-item">
+		    		<div class="event-pic">
+		    			<img alt="" src="${image_server}/images/ngle1.1.png">
+		    		</div>
+		    		<div class="event-pic">
+		    			<img alt="" src="${image_server}/images/ngle2.1.png">
+		    		</div>
+    			</div>
+	    		
+    		</div>
+    	</div>
+    </section>
+    <!--  event end===========================================  -->
     <!-- recruit start============================================= -->
     <section id="recruit" >
     	<div class="recruit-row">

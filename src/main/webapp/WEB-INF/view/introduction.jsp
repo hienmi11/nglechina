@@ -70,6 +70,11 @@
                                     <div data-translate="nav-button4"></div>
                                 </a>
                             </li>
+                             <li>
+                                <a href="/index?url=event" class="nav-button-intro" data-href="#event">
+                                    <div data-translate="nav-button8"></div>
+                                </a>
+                            </li>
                             <li>
                                 <a href="/index?url=recruit" class="nav-button-intro" data-href="#recruit">
                                     <div data-translate="nav-button5"></div>
@@ -79,25 +84,6 @@
                                 <a href="/index?url=contact" class="nav-button-intro" data-href="#contact">
                                     <div data-translate="nav-button6"></div>
                                 </a>
-                            </li>
-                            <li>
-                                <div class="nav-button-intro nav-div">
-                                    <div data-translate="nav-button-lang"></div>
-                                </div>
-                                <ul class="dropdown-menu">
-                                    <li onclick="change_lang(0)">
-                                        <img class="nav-locale" src="${image_server}/images/cn.png"/>
-                                        <a class="nav-button-intro dropdown-button">
-                                            <div class="lang-btn">中文</div>
-                                        </a>
-                                    </li>
-		                            <li onclick="change_lang(1)">
-		                                <img class="nav-locale" src="${image_server}/images/ko.png"/>
-		                                <a class="nav-button-intro dropdown-button">
-		                                    <div class="lang-btn">한글</div>
-		                                </a>
-									</li>
-								</ul>
                             </li>
                             <li>
                                 <a href="http://www.ngle.co.kr" rel="noopenner" class="nav-button-intro">
@@ -142,6 +128,12 @@
 			<div class="mobile-tab" data-href="#team">
 				<a href="/index" class="mobile-menu-tab">
 		            <div data-translate="nav-button4"></div>
+	            </a>
+	            <img src="${image_server}/images/arrowRight.png">
+			</div>
+			<div class="mobile-tab" data-href="#event">
+				<a href="/index" class="mobile-menu-tab">
+		            <div data-translate="nav-button8"></div>
 	            </a>
 	            <img src="${image_server}/images/arrowRight.png">
 			</div>
