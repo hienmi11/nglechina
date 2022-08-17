@@ -36,6 +36,10 @@ const dictionary = {
         CN: "韩国本社",
         KO: "본사"
     },
+    "nav-button8": {
+        CN: "公司活动",
+        KO: "워크샵"
+    },
     "nav-button-lang": {
         CN: "语言",
         KO: "언어"
@@ -124,6 +128,10 @@ const dictionary = {
         CN: "邮箱：",
         KO: "메일:"
     },
+    "event-title": {
+        CN: "- NGLE WORKSHOP -",
+        KO: "NGLE 워크샵"
+    },
     "recruit-title": {
         CN: "- JOIN NGLE -",
         KO: "NGLE의 내일을 함께할 인재를 찾습니다."
@@ -161,7 +169,7 @@ function translate() {
         try{
         	$(this).html(dictionary[key][current_lang] || "N/A");
 		}catch(e){
-			console.log($(this));
+			//console.log($(this));
 		}
     });
 }

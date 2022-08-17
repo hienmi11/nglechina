@@ -40,7 +40,7 @@
     </head>
     <body class="stretched">
         <!-- Header ============================================= -->
-        <header id="header" class="transparent-header hidden-xs page-section dark">
+               <header id="header" class="transparent-header hidden-xs page-section dark">
             <div id="header-wrap">
                 <div class="container clearfix">
                     <div id="logo">
@@ -48,19 +48,116 @@
                             <img src="${image_server}/images/logo_light.png" alt="ngle Logo"/>
                         </a>
                     </div>
+                    <nav id="primary-menu">
+                        <ul class="one-page-menu" >
+                            <li>
+                                <a href="/index?url=about" class="nav-button-intro"  >
+                                    <div data-translate="nav-button-about"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/index?url=business" class="nav-button-intro" data-href="#business">
+                                    <div data-translate="nav-button2"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/index?url=client" class="nav-button-intro" data-href="#client">
+                                    <div data-translate="nav-button3"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/index?url=team" class="nav-button-intro" data-href="#team">
+                                    <div data-translate="nav-button4"></div>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="/index?url=event" class="nav-button-intro" data-href="#event">
+                                    <div data-translate="nav-button8"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/index?url=recruit" class="nav-button-intro" data-href="#recruit">
+                                    <div data-translate="nav-button5"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/index?url=contact" class="nav-button-intro" data-href="#contact">
+                                    <div data-translate="nav-button6"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ngle.co.kr" rel="noopenner" class="nav-button-intro">
+                                    <div data-translate="nav-button7"></div>
+                                </a>
+                            </li>
+					</nav>
 <!-- #primary-menu end -->
 				</div>
 			</div>
 		</header>
          <!-- MainBody ============================================= -->
         <div class="main">
-            <div class="mobile-header visible-xs">
-                <div class="mobile-content">
-                    <div class="mobile-logo">
-                        <img src="${image_server}/images/logo_light.png" onclick="javascript:window.location.href='/'">
-                    </div>
-                </div>
-            </div>
+        <div class="mobile-header visible-xs">
+		<div class="mobile-content">
+			<div class="mobile-logo">
+				<img src="${image_server}/images/logo_light.png">
+			</div>
+			<div class="mobile-menu">
+				<img src="${image_server}/images/open.png">
+		    </div>
+		</div>
+		<div class="mobile-body display-n">
+			<div class="mobile-tab" data-href="#about">
+				<a href="/index" class="mobile-menu-tab">
+		            <div data-translate="nav-button-about"></div>
+	            </a>
+	            <img src="${image_server}/images/arrowRight.png">
+			</div>
+			<div class="mobile-tab" data-href="#business">
+				<a href="/index" class="mobile-menu-tab">
+		            <div data-translate="nav-button2"></div>
+	            </a>
+	            <img src="${image_server}/images/arrowRight.png">
+			</div>
+			<div class="mobile-tab" data-href="#client">
+				<a href="/index" class="mobile-menu-tab">
+		            <div data-translate="nav-button3"></div>
+	            </a>
+	            <img src="${image_server}/images/arrowRight.png">
+			</div>
+			<div class="mobile-tab" data-href="#team">
+				<a href="/index" class="mobile-menu-tab">
+		            <div data-translate="nav-button4"></div>
+	            </a>
+	            <img src="${image_server}/images/arrowRight.png">
+			</div>
+			<div class="mobile-tab" data-href="#event">
+				<a href="/index" class="mobile-menu-tab">
+		            <div data-translate="nav-button8"></div>
+	            </a>
+	            <img src="${image_server}/images/arrowRight.png">
+			</div>
+			<div class="mobile-tab" data-href="#recruit">
+				<a href="/index" class="mobile-menu-tab">
+		            <div data-translate="nav-button5"></div>
+	            </a>
+	            <img src="${image_server}/images/arrowRight.png">
+			</div>
+			<div class="mobile-tab" data-href="#contact">
+				<a href="/index" class="mobile-menu-tab">
+		            <div data-translate="nav-button6"></div>
+	            </a>
+	            <img src="${image_server}/images/arrowRight.png">
+			</div>
+			<div class="mobile-tab">
+				<a href="http://www.ngle.co.kr" class="mobile-menu-tab">
+		            <div data-translate="nav-button7"></div>
+	            </a>
+	            <img src="${image_server}/images/arrowRight.png">
+			</div>
+		</div>
+	</div>
+           
             <!-- ---------SEND RESUME-------------------------------- -->
             <section class="send">
                 <div class="send-row">
@@ -301,7 +398,7 @@
 </section>
 <!-- Go To Top
 	============================================= -->
-<div id="gotoTop" class="icon-angle-up">
+<div id="gotoTop" class="icon-angle-up" style="display:block">
     <img style="width:14px; " src="${image_server}/images/arrowUp.png"/>
 </div>
 </body>

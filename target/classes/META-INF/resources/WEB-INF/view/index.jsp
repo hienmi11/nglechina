@@ -38,11 +38,7 @@
         <title>恩格 NGLE-CHINA</title>
     </head>
     <body class="stretched">
-    	<div class="loading-div">
-	    	<input id = "preload" type = "checkbox">
-	    	<label for="preload" class="loading">NGLE</label>
-	    	<div class="loader-ring"></div>
-    	</div>
+    	<input type="hidden" name ="url" value="${url}"/>
         <!-- Header ============================================= -->
         <header id="header" class="transparent-header hidden-xs page-section dark">
             <div id="header-wrap">
@@ -72,6 +68,11 @@
                             <li>
                                 <a href="" class="nav-button" data-href="#team">
                                     <div data-translate="nav-button4"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="nav-button" data-href="#event">
+                                    <div data-translate="nav-button8"></div>
                                 </a>
                             </li>
                             <li>
@@ -174,6 +175,12 @@
 	            </a>
 	            <img src="${image_server}/images/arrowRight.png">
 			</div>
+			<div class="mobile-tab" data-href="#event">
+				<a href="#event" class="mobile-menu-tab">
+		            <div data-translate="nav-button8"></div>
+	            </a>
+	            <img src="${image_server}/images/arrowRight.png">
+			</div>
 			<div class="mobile-tab" data-href="#recruit">
 				<a href="#recruit" class="mobile-menu-tab">
 		            <div data-translate="nav-button5"></div>
@@ -192,15 +199,6 @@
 	            </a>
 	            <img src="${image_server}/images/arrowRight.png">
 			</div>
-			<!-- <div class="mobile-lang">
-				<a href="" class="mobile-menu-tab">
-		            <div data-translate="nav-button-lang"></div>
-	            </a>
-	            <img src="/images/lang.png">
-			</div>
-			<div>
-			
-			</div> -->
 		</div>
 	</div>
 <!-- Main body ============================================= -->
@@ -662,6 +660,31 @@
     
     <!-- our team end============================================= -->
     
+    <!--  event start======================================================  -->
+    <section id="event">
+    	<div class="event-row">
+    		<div class="event-box">
+	    		<div class="event-title" data-translate="event-title"></div>
+	    		<a href="/event">
+		    		<div class="event-btn">
+		    			<div class="event-btn-text">
+		    				READ MORE >
+		    			</div>
+		    		</div>
+    			</a>
+    			<div class="d-flex event-item">
+		    		<div class="event-pic">
+		    			<img alt="" src="${image_server}/images/ngle1.1.png">
+		    		</div>
+		    		<div class="event-pic">
+		    			<img alt="" src="${image_server}/images/ngle2.1.png">
+		    		</div>
+    			</div>
+	    		
+    		</div>
+    	</div>
+    </section>
+    <!--  event end===========================================  -->
     <!-- recruit start============================================= -->
     <section id="recruit" >
     	<div class="recruit-row">
