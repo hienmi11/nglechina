@@ -226,13 +226,15 @@
         <div class="intro-wrapper">
             <p class="about-title2">John Lasster · PIXAR COO</p>
         </div>
-        <div class="intro-wrapper">
-            <p class="about-text" data-translate="about-text1"></p>
-            <p class="about-text" data-translate="about-text2"></p>
-        </div>
+<%--        <div class="intro-wrapper">--%>
+<%--            <p class="about-text" data-translate="about-text1"></p>--%>
+<%--            <p class="about-text" data-translate="about-text2"></p>--%>
+<%--			<img src="${image_server}/images/aboutus.jpg">--%>
+<%--        </div>--%>
         <div class="intro-wrapper m-15">
             <p class="about-small-text text-left" data-translate="about-small-text1"></p>
             <p class="about-small-text text-left" data-translate="about-small-text2"></p>
+            <p class="about-small-text text-left" data-translate="about-small-text3"></p>
         </div>
     </section>
     <!-- business Web============================================= -->
@@ -241,7 +243,9 @@
         <div class="business-title hidden-xs">OUR BUSINESS</div>
         
         <div class="business-img hidden-xs">
-        	<img class="business-img-path" src="${image_server}/images/business-cn.png">
+        	<img class="business-img-path" src="${image_server}/images/business1.jpg">
+			<br>
+			<img class="business-img-path2" src="${image_server}/images/business2.jpg">
         </div>
         <div class="visible-xs-block">
 	        <div class="intro-wrapper">

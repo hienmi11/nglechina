@@ -48,21 +48,25 @@ const dictionary = {
         CN: "关于我们",
         KO: "품질이야말로 최고의 사업계획서"
     },
-    "about-text1": {
-        CN: "服务品质是获得项目成功的最佳方案",
-        KO: "서비스의 품질은 사업의 성공을 위한 가장 확실한 방법이며"
-    },
-    "about-text2": {
-        CN: "NGLE的核心价值即是服务品质",
-        KO: "NGLE의 핵심 가치 또한 서비스의 품질입니다."
-    },
+    // "about-text1": {
+    //     CN: "服务品质是获得项目成功的最佳方案",
+    //     KO: "서비스의 품질은 사업의 성공을 위한 가장 확실한 방법이며"
+    // },
+    // "about-text2": {
+    //     CN: "NGLE的核心价值即是服务品质",
+    //     KO: "NGLE의 핵심 가치 또한 서비스의 품질입니다."
+    // },
     "about-small-text1": {
-        CN: "NGLE由NHN, Wemade, Smilegate, NC soft 等IT企业出身的QA专家组成",
-        KO: "NHN, 위메이드, 스마일게이트, NC소프트 등 IT 기업 출신의 QA 전문가들로 구성된 NGLE은"
+        CN: "NGLE作为Kakao games的子公司,为Kaokao发行的手机游戏和非游戏（平台，区块链）<br><br>提供服务，目前还与国外各大游戏公司拥有紧密的合作。",
+        KO: "NGLE作为Kakao games的子公司,为Kaokao发行的手机游戏和非游戏（平台，区块链）<br><br>提供服务，目前还与国外各大游戏公司拥有紧密的合作。"
     },
     "about-small-text2": {
-        CN: "凭借丰富的项目经验和先进技术，追求最佳的服务品质.",
-        KO: "다양한 프로젝트 경험과 고도화된 기술을 바탕으로 최상의 품질을 추구합니다."
+        CN: "团队核心成员由NHN,Wemade,Smilegate,NC soft 等IT企业出身的专家组成,<br><br>拥有躲过QA/本地化/运营以及开发经验。",
+        KO: "团队核心成员由NHN,Wemade,Smilegate,NC soft 等IT企业出身的专家组成,<br><br>拥有躲过QA/本地化/运营以及开发经验。"
+    },
+    "about-small-text3" : {
+        CN:"凭借丰富的项目经验和先进技术，追求最佳的服务品质。<br><br>服务品质是获得项目成功的最佳方案，NGLE的核心价值即是服务品质。",
+        KO:"凭借丰富的项目经验和先进技术，追求最佳的服务品质。<br><br>服务品质是获得项目成功的最佳方案，NGLE的核心价值即是服务品质。"
     },
     "introduce-title": {
         CN: "介绍我们公司 NGLE-CHINA",
@@ -175,9 +179,11 @@ function translate() {
 }
 function change_img(index){
 	if (index == 1) {
-		$('.business-img-path').attr("src","/images/business-ko.png");
-	}else{
-		$('.business-img-path').attr("src","/images/business-cn.png");
+        $('.business-img-path').attr("src", "/images/business-ko.png");
+        $('.business-img-path2').hide()
+    }else{
+		$('.business-img-path').attr("src","/images/business1.jpg");
+		$('.business-img-path2').show()
 	}
 }
 translate();
