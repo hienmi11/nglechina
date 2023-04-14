@@ -22,10 +22,10 @@
         <link rel="stylesheet" href="https://fonts.proxy.ustclug.org/css2?family=Noto+Sans+SC&display=swap"/>
         
         <link rel="stylesheet" href="${image_server}/css/custom.css" type="text/css"/>
+        <link rel="stylesheet" href="${image_server}/css/event.css" type="text/css"/>
         <link rel="stylesheet" href="${image_server}/css/slick.css" type="text/css"/>
         <link rel="stylesheet" href="${image_server}/css/slick-theme.css" type="text/css"/>
         <link rel="stylesheet" href="${image_server}/css/preload.css" type="text/css"/>
-        <link rel="stylesheet" href="${image_server}/css/slick-theme.css" type="text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <!-- External JavaScripts
 		================================================= -->
@@ -159,19 +159,104 @@
 	</div>
 	</div>
 <!-- event body============================================== -->
-<section id="event-detail-body">
+<section class="event-detail-body">
 	<div class="container">
 		<div class="event-detail-row">
 			<div class="event-video">
-			<div class="event-detail-title" data-translate="event-detail-title">NGLE WORKSHOP</div>
-				<video width="90%" controls>
-					<source src="${image_server}/images/video.mp4" type="video/mp4">
-				</video>
+				<div class="event-detail-title" data-translate="event-detail-title">- 2022.08.15 -</div>
+				<div class="event-detail-video">
+					<video controls autoplay="autoplay" >
+						<source src="${image_server}/images/tuanjian/video.mp4" type="video/mp4">
+					</video>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
-
+<section>
+	<div class="container-fluid">
+		<div class="event-detail-photo">
+			<div class="col-lg-6">
+				<img alt="" src="${image_server}/images/tuanjian/jiti1.jpg"></img>
+			</div>
+			<div class="col-lg-6">
+				<img alt="" src="${image_server}/images/tuanjian/jiti2.jpg"></img>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="event-slick-photo">
+			<div class="row">
+				<div class="autoplay_photo">
+				   <div>
+				       <img src="${image_server}/images/tuanjian/xiaozu1.jpg" class="" title="" alt="">
+				   </div>
+				   <div>
+				       <img src="${image_server}/images/tuanjian/xiaozu2.jpg" class="" title="" alt="">
+				   </div>
+				   <div>
+				       <img src="${image_server}/images/tuanjian/xiaozu3.jpg" class="" title="" alt="">
+				   </div>
+				   <div>
+				       <img src="${image_server}/images/tuanjian/xiaozu4.jpg" class="" title="" alt="">
+				   </div>
+				   <div>
+				       <img src="${image_server}/images/tuanjian/xiaozu5.jpg" class="" title="" alt="">
+				   </div>
+				</div>
+				<script type="text/javascript">
+					$(document).ready(function(){
+						if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+					      $('.autoplay_photo').slick({
+					    	  slidesToShow: 3,
+					    	  slidesToScroll: 1,
+					    	  autoplay: true,
+					    	  autoplaySpeed: 3000,
+					      });
+						}else{
+					      $('.autoplay_photo').slick({
+					    	  slidesToShow: 3,
+					    	  slidesToScroll: 1,
+					    	  autoplay: true,
+					    	  autoplaySpeed: 3000,
+					      });
+						}
+					});
+				</script>
+			</div>
+		</div>
+		
+		<div class="event-detail-photo">
+			<div class="col-lg-3">
+				<img class="event-other" alt="" src="${image_server}/images/tuanjian/other5.jpg"></img>
+			</div>
+			<div class="col-lg-3">
+				<img class="event-other" alt="" src="${image_server}/images/tuanjian/other4.jpg"></img>
+			</div>
+			<div class="col-lg-3">
+				<img class="event-other" alt="" src="${image_server}/images/tuanjian/other2.jpg"></img>
+			</div>
+			<div class="col-lg-3">
+				<img class="event-other" alt="" src="${image_server}/images/tuanjian/other1.jpg"></img>
+			</div>
+		</div>
+	</div>
+	<div class="event-detail-photo">
+		
+			<div class="col-lg-3">
+				<img class="" alt="" src="${image_server}/images/tuanjian/other6.jpg"></img>
+			</div>
+			<div class="col-lg-3">
+				<img class="" alt="" src="${image_server}/images/tuanjian/other8.jpg"></img>
+			</div>
+			<div class="col-lg-3">
+				<img class="" alt="" src="${image_server}/images/tuanjian/other9.jpg"></img>
+			</div>
+			<div class="col-lg-3">
+				<img class="" alt="" src="${image_server}/images/tuanjian/other10.jpg"></img>
+			</div>
+		</div>
+</section>
 <!-- Footer ============================================= -->
 <div class="empty-space-lg"></div>
 <section id="footer" class="page-footer color-black">

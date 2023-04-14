@@ -1091,74 +1091,6 @@ a .dark #header.sticky-header:not(.transparent-header) #header-wrap:not(.not-dar
 
 /* client end*/
 
-/* event start */
-.event-row{
-	width:100%;
-	height:550px;
-	background-color:  #f7f7f7;
-	text-align:center;
-}
-.event-box{
-	max-width: 1040px;
-    margin: 50px auto 50px;
-}
-.event-title{
-	font-size: 34px;
-	font-weight: 400 !important;
-	letter-spacing: 0.2em;
-	line-height: 1.3;
-	padding-top: 65px;
-}
-.event-item{
-	justify-content: space-evenly;
-}
-.event-pic img{
-	margin-top:55px;
-	width: 350px;
-	height: 250px;
-}
-.event-btn{
-	margin: auto;
-	/* width:230px;
-	height:60px; */
-	/* background-color: #00b5c1 !important; */
-	text-align:center;
-	margin-top:60px;	
-}
-.event-btn:hover{
-	/* background-color: #fff !important; */
-	/* border: 1px solid #00b5c1 */
-}
-.event-btn-text{
-	font-size: 22px !important;
-	font-weight: 100 !important;
-	letter-spacing: 0.2em;
-    line-height: 1.2;
-    text-decoration: underline;
-   /*  padding: 16px 47px 36px 47px !important; */
-}
-.event-btn-text:hover{
-	color: #00b5c1 !important;
-}
-#event-detail-body{
-	margin-top:80px;
-	padding:20px;
-}
-.event-detail-row{
-	width: 100%;
-	font-size: 25px;
-	font-weight: 400 !important;
-	letter-spacing: 0.2em;
-	line-height: 1.3;
-}
-.event-video{
-	padding:15px;
-	width:100%;
-	height: 700px;
-	background-color:#f7f7f7;
-}
-/* event end */
-
 /* recruit start*/
 .recruit-row{
 	background:url("http://images.ngledl.com/images/recruit_bg.png");
@@ -1864,6 +1796,9 @@ ol.re-list li{
 }
 .display-in{
 	display:block;
+}
+.mt-50{
+	margin-top:50px;
 }
 .mt-100{
 	margin-top:100px;

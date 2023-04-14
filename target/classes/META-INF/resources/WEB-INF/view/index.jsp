@@ -21,7 +21,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link rel="stylesheet" href="https://fonts.proxy.ustclug.org/css2?family=Noto+Sans+SC&display=swap"/>
         
-        <link rel="stylesheet" href="${image_server}/css/custom.css?v8" type="text/css"/>
+        <link rel="stylesheet" href="${image_server}/css/custom.css" type="text/css"/>
+        <link rel="stylesheet" href="${image_server}/css/event.css" type="text/css"/>
         <link rel="stylesheet" href="${image_server}/css/slick.css" type="text/css"/>
         <link rel="stylesheet" href="css/slick-theme.css" type="text/css"/>
         <link rel="stylesheet" href="${image_server}/css/preload.css" type="text/css"/>
@@ -816,8 +817,8 @@
 	
 	</script>
 		<script type="text/javascript" src="${image_server}/js/util.js"></script>
-		<script type="text/javascript" src="${image_server}/js/functions.js?v7"></script>
-		<script type="text/javascript" src="${image_server}/js/language.js?v2"></script>
+		<script type="text/javascript" src="${image_server}/js/functions.js?"></script>
+		<script type="text/javascript" src="${image_server}/js/language.js?"></script>
 		<script type="text/javascript" src="${image_server}/js/transitionAnim.js"></script>
 		<script type="text/javascript" src="${image_server}/js/portfolios.js"></script>
 		<script type="text/javascript" src="${image_server}/js/teamtable.js"></script>
