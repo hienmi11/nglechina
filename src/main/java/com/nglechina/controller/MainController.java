@@ -31,10 +31,11 @@ public class MainController {
 	public static void main(String[] args) {
 		SpringApplication.run(MainController.class, args);
 	}
-	@RequestMapping(value={"/"})
+	@RequestMapping(value={"/","/index"})
 	public ModelAndView index(HttpServletRequest req, HttpServletResponse res){
 		ModelAndView mv = new ModelAndView();
-		
+		String url = req.getParameter("url");
+		mv.addObject("url", url);
 		mv.addObject("image_server", image_server);
 		mv.setViewName("index");
 		return mv;
@@ -74,6 +75,15 @@ public class MainController {
 		
 		mv.addObject("image_server", image_server);
 		mv.setViewName("introduction");
+		return mv;
+		
+	}
+	@RequestMapping(value={"/event"})
+	public ModelAndView event(HttpServletRequest req, HttpServletResponse res){
+		ModelAndView mv = new ModelAndView();
+		
+		mv.addObject("image_server", image_server);
+		mv.setViewName("event");
 		return mv;
 		
 	}

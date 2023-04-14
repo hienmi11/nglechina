@@ -18,6 +18,7 @@ function addEvt(){
         
 		goClose();
 	});
+	
 	//投简历按钮
 	$(".send_resume").on("click",function(e){
 		var tar = e.currentTarget;
@@ -180,7 +181,50 @@ function debounce(func, wait, immediate) {
     }
     ;
 }
-
+function initScroll(){
+	var url = document.getElementsByName("url")[0].value;
+	var temp_height = 0;
+	switch(url){
+		case "about":
+		temp_height = 950 -70;
+		break;
+		case "business":
+		temp_height = 950+546 -70;
+		break;
+		case "client":
+		temp_height = 950+546+450+828 -70;
+		break;
+		case "team":
+		temp_height = 950+546+450+193+828;
+		break;
+		case "event":
+		temp_height = 950+546+450+193+582.78+828+87;
+		break;
+		case "recruit":
+		temp_height = 950+546+450+193+582.78+828+87+550;
+		break;
+		case "contact":
+		temp_height = 950+546+450+193+582.78+828+88+550+400;
+		break;
+	}
+	$('html,body').stop(true).animate({
+    		'scrollTop': temp_height
+        }, 1000, 'linear');
+	/*document.querySelector("#business").scrollIntoView({
+		behavior:"smooth",
+	})*/
+	//console.log(dist);
+	//$("html").animate({ scrollTop: dist -80 }, 1000);	//100为滚动条的位置，1000为滚动的时延
+	/*console.log(document.body);
+	document.body.animate({
+		scrollTop:dist
+	},{
+		duration:1000,
+		easing:'forward',
+		easing:'linear',
+	},
+	);*/
+}
 var requesting = false;
 
 var killRequesting = debounce(function() {
@@ -205,6 +249,8 @@ var SEMICOLON = SEMICOLON || {};
     // USE STRICT
     "use strict";
 	addEvt();
+	//在招募页面点击title事件
+	initScroll();
     SEMICOLON.initialize = {
 
         init: function() {
@@ -1625,9 +1671,9 @@ var SEMICOLON = SEMICOLON || {};
                             $pagemenu.toggleClass('pagemenu-active', false);
                             $body.toggleClass('primary-menu-open', false);
                         }
-
+						console.log(Number(divScrollOffset))
                         $('html,body').stop(true).animate({
-                            'scrollTop': $(divScrollToAnchor).offset().top - Number(divScrollOffset)
+                            'scrollTop': $(divScrollToAnchor).offset().top - 70
                         }, Number(divScrollSpeed), divScrollEasing);
 
                         onePageGlobalOffset = Number(divScrollOffset);
