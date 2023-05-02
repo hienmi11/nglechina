@@ -34,10 +34,154 @@
 		<script type="text/javascript" src="${image_server}/js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="${image_server}/js/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript" src="${image_server}/js/slick.min.js"></script>
-		
+
         <!-- Document Title ============================================= -->
         <title>恩格 NGLE-CHINA</title>
     </head>
+	<style>
+		.loader_website {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1100;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.5);
+			display: block;
+			-webkit-transition: ease-in-out .1s;
+			-moz-transition: ease-in-out .1s;
+			-o-transition: ease-in-out .1s;
+			-ms-transition: ease-in-out .1s;
+			transition: ease-in-out .1s;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-o-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box
+		}
+
+		.loader_website * {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-o-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box
+		}
+
+		body.loader .loader_website span {
+			top: 18%
+		}
+
+		.loader_website>span {
+			display: block;
+			width: 48px;
+			height: 48px;
+			padding: 4px;
+			background-color: #fff;
+			-webkit-border-radius: 100%;
+			-moz-border-radius: 100%;
+			-o-border-radius: 100%;
+			-ms-border-radius: 100%;
+			border-radius: 100%;
+			position: absolute;
+			left: 50%;
+			margin-left: -24px;
+			top: -50px;
+			-webkit-transition: ease-in-out .1s;
+			-moz-transition: ease-in-out .1s;
+			-o-transition: ease-in-out .1s;
+			-ms-transition: ease-in-out .1s;
+			transition: ease-in-out .1s;
+			-webkit-box-shadow: #000 0 5px 10px -5px;
+			-moz-box-shadow: #000 0 5px 10px -5px;
+			-o-box-shadow: #000 0 5px 10px -5px;
+			-ms-box-shadow: #000 0 5px 10px -5px;
+			box-shadow: #000 0 5px 10px -5px
+		}
+
+		.loader_website>span>svg {
+			fill: transparent;
+			stroke: #563d7c;
+			stroke-width: 5;
+			animation: loader_dash 2s ease infinite,loader_rotate 2s linear infinite
+		}
+
+		@keyframes loader_dash {
+			0% {
+				stroke-dasharray: 1,95;
+				stroke-dashoffset: 0
+			}
+
+			50% {
+				stroke-dasharray: 85,95;
+				stroke-dashoffset: -25
+			}
+
+			100% {
+				stroke-dasharray: 85,95;
+				stroke-dashoffset: -93
+			}
+		}
+
+		@keyframes loader_rotate {
+			0% {
+				transform: rotate(0deg)
+			}
+
+			100% {
+				transform: rotate(360deg)
+			}
+		}
+	</style>
+	<script>
+		$(document).ready(function() {
+			//显示“加载中”提示
+			Loader.open();
+			//加载后关闭
+			$(window).on("load", function() {
+				Loader.close();
+			});
+		});
+		var Loader = {
+			loader: null,
+			body: null,
+			html: '<span><svg width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="15"></svg></span>',
+			cssClass: "loader",
+			check: function() {
+				if (this.body == null) {
+					this.body = document.getElementsByTagName("body")[0]
+				}
+			},
+			open: function() {
+				this.check();
+				if (!this.isOpen()) {
+					this.loader = document.createElement("div");
+					this.loader.setAttribute("id", "loader");
+					this.loader.classList.add("loader_website");
+					this.loader.innerHTML = this.html;
+					this.body.appendChild(this.loader);
+					setTimeout(function() {
+						Loader.body.classList.add(Loader.cssClass)
+					}, 1)
+				}
+				return this
+			},
+			close: function() {
+				this.check();
+				if (this.isOpen()) {
+					this.body.classList.remove(this.cssClass);
+					setTimeout(function() {
+						Loader.loader.remove()
+					}, 100)
+				}
+				return this
+			},
+			isOpen: function() {
+				this.check();
+				return this.body.classList.contains(this.cssClass)
+			}
+		};
+	</script>
     <body class="stretched">
     	<input type="hidden" name ="url" value="${url}"/>
         <!-- Header ============================================= -->
@@ -239,9 +383,9 @@
     </section>
     <!-- business Web============================================= -->
     <section class="page3 clearfix" id="business">
-    
+
         <div class="business-title hidden-xs">OUR BUSINESS</div>
-        
+
         <div class="business-img hidden-xs">
         	<img class="business-img-path" src="${image_server}/images/business1.jpg">
 			<br>
@@ -253,7 +397,7 @@
 	        </div>
 	        <div class="intro-wrapper">
 	            <p class="about-small-text">
-	            	PC · MOBILE · VR · PLATFORM APP · SMART TV 
+	            	PC · MOBILE · VR · PLATFORM APP · SMART TV
 	            	<br>
 	            	根据顾客的事业特性、想要的商务领域
 	            	<br>
@@ -265,7 +409,7 @@
 	        <div class="intro-wrapper">
 	        	<div class="about-text text-center">
 		        	<img class="line-bar" alt="" src="${image_server}/images/line.png">
-					游戏 QA       	
+					游戏 QA
 		        	<img class="line-bar" alt="" src="${image_server}/images/line.png">
 	        	</div>
 	        	<div class="business-box">
@@ -308,7 +452,7 @@
 	        <div class="intro-wrapper">
 	        	<div class="about-text text-center">
 		        	<img class="line-bar" alt="" src="${image_server}/images/line.png">
-					非游戏 QA      	
+					非游戏 QA
 		        	<img class="line-bar" alt="" src="${image_server}/images/line.png">
 	        	</div>
 	        	<div class="business-box">
@@ -351,7 +495,7 @@
 	        <div class="intro-wrapper">
 	        	<div class="about-text text-center">
 		        	<img class="line-bar" alt="" src="${image_server}/images/line.png">
-					Fun QA      	
+					Fun QA
 		        	<img class="line-bar" alt="" src="${image_server}/images/line.png">
 	        	</div>
 	        	<div class="business-box">
@@ -388,7 +532,7 @@
 	        <div class="intro-wrapper">
 	        	<div class="about-text text-center">
 		        	<img class="line-bar" alt="" src="${image_server}/images/line.png">
-					运营    	
+					运营
 		        	<img class="line-bar" alt="" src="${image_server}/images/line.png">
 	        	</div>
 	        	<div class="business-box">
@@ -411,7 +555,7 @@
 					    <br>
 					    - 开设官方社区频道 · 设计管理
 					    <br>
-					    - 掌握玩家动向 · 实时监控 · 提供报告  
+					    - 掌握玩家动向 · 实时监控 · 提供报告
 		        	</div>
 	        	</div>
 	        	<div class="business-box">
@@ -514,7 +658,7 @@
 	        </div>
         </div> -->
     </section>
-    
+
     <!--公司介绍  start-->
     <section class="introduce clearfix" id="introduce">
     	<div class="container">
@@ -550,13 +694,13 @@
     	</div>
     </section>
     <!--公司介绍  end-->
-    
+
     <!-- client start  -->
     <section class="page5 clearfix" id="client">
     	<div class="client-row">
-    	
+
 	    	<div class="client-title" data-translate="nav-button3"></div>
-	    	
+
 		    <div class="autoplay">
 		   		<a>
 					<img src="${image_server}/images/client_01.png"/>
@@ -620,15 +764,15 @@
 					}
 			    });
 			</script>
-		    
-		    
+
+
     	</div>
 	</section>
 	<!-- client end  -->
-	
+
 	<!-- our team start============================================= -->
     <section class="" id="team">
-    
+
         <div class="business-title team">OUR TEAM</div>
         <div class="intro-wrapper">
             <p class="about-text" data-translate="team-text1"></p>
@@ -662,9 +806,9 @@
             </a>
         </div>
     </section>
-    
+
     <!-- our team end============================================= -->
-    
+
     <!--  event start======================================================  -->
     <section id="event">
     	<div class="event-row">
@@ -685,7 +829,7 @@
 		    			<img alt="" src="${image_server}/images/ngle2.1.png">
 		    		</div>
     			</div>
-	    		
+
     		</div>
     	</div>
     </section>
@@ -732,7 +876,7 @@
     		<div class="contact-call" data-translate="email"></div>
     		<div class="contact-call">contact@ngledl.com</div>
     	</div>
-    	
+
     	<div class="contact-map" id="contact-map">
     	</div>
     	<!-- 引入Javascript API GL，参数说明参见下文 -->
@@ -794,38 +938,12 @@
     <img style="width:14px; " src="${image_server}/images/arrowUp.png"/>
 </div>
 </body>
-	<script type="text/javascript">
-		/* window.scrollTo({top:0, behavior:'smooth'});
-		setTimeout(function(){
-			$('body').css({'overflow': 'visible'});
-			$('.loading-div').attr('style','display:none;');
-		},2000); */
-		
-		
-		/* var top = $('body').scrollY;
-		
-		console.log(top);
-		
-		if(top> 0){
-			$('.loading-div').attr('style','display:none;');
-		}else{
-			$('.loading-div').attr('style','display:block;');
-		} */
-		window.scrollTo({top:0, behavior:'auto'});
-		$('body').css({'overflow': 'hidden'});
-		window.onload = function () {
-			$('body').css({'overflow': 'visible'});
-			$('.loading-div').attr('style','display:none;');
-		}
-	
-	
-	</script>
-		<script type="text/javascript" src="${image_server}/js/util.js"></script>
-		<script type="text/javascript" src="${image_server}/js/functions.js?"></script>
-		<script type="text/javascript" src="${image_server}/js/language.js?"></script>
-		<script type="text/javascript" src="${image_server}/js/transitionAnim.js"></script>
-		<script type="text/javascript" src="${image_server}/js/portfolios.js"></script>
-		<script type="text/javascript" src="${image_server}/js/teamtable.js"></script>
-		<script type="text/javascript" src="${image_server}/js/plugins.js"></script>
+	<script type="text/javascript" src="${image_server}/js/util.js"></script>
+	<script type="text/javascript" src="${image_server}/js/functions.js?"></script>
+	<script type="text/javascript" src="${image_server}/js/language.js?"></script>
+	<script type="text/javascript" src="${image_server}/js/transitionAnim.js"></script>
+	<script type="text/javascript" src="${image_server}/js/portfolios.js"></script>
+	<script type="text/javascript" src="${image_server}/js/teamtable.js"></script>
+	<script type="text/javascript" src="${image_server}/js/plugins.js"></script>
 </html>
 

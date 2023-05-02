@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.nglechina</groupId>
-	<artifactId>springboot</artifactId>
+	<artifactId>nglechina</artifactId>
 	<version>1</version>
 	<name>spring-boot-2022</name>
 	<packaging>jar</packaging>
