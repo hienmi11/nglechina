@@ -57,8 +57,8 @@ const dictionary = {
     //     KO: "NGLE의 핵심 가치 또한 서비스의 품질입니다."
     // },
     "about-small-text1": {
-        CN: "NGLE作为Kakao games的子公司,为Kaokao发行的手机游戏和非游戏（平台，区块链）<br><br>提供服务，目前还与国外各大游戏公司拥有紧密的合作。",
-        KO: "NGLE作为Kakao games的子公司,为Kaokao发行的手机游戏和非游戏（平台，区块链）<br><br>提供服务，目前还与国外各大游戏公司拥有紧密的合作。"
+        CN: "NGLE作为Kakao games的子公司,为Kakao发行的手机游戏和非游戏（平台，区块链）<br><br>提供服务，目前还与国外各大游戏公司拥有紧密的合作。",
+        KO: "NGLE作为Kakao games的子公司,为Kakao发行的手机游戏和非游戏（平台，区块链）<br><br>提供服务，目前还与国外各大游戏公司拥有紧密的合作。"
     },
     "about-small-text2": {
         CN: "团队核心成员由NHN,Wemade,Smilegate,NC soft 等IT企业出身的专家组成,<br><br>拥有躲过QA/本地化/运营以及开发经验。",
