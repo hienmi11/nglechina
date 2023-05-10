@@ -26,7 +26,7 @@ import net.sf.json.JSONObject;
 @Controller
 @SpringBootApplication(scanBasePackages = "/nglechina")
 public class MainController {
-	//public static final String image_server = "http://localhost:8080";	//local
+//	public static final String image_server = "http://localhost:8080";	//local
 	public static final String image_server = "http://images.ngledl.com";		//real
 	public static void main(String[] args) {
 		SpringApplication.run(MainController.class, args);
